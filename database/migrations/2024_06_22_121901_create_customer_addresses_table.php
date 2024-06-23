@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('city');
             $table->string('statte', 45)->nullable();
             $table->string('zipcode', 45);
-            $table->string('country_code', 3);
+            // $table->string('country_code', 3);
             $table->foreignId('customer_id')->references('id')->on('customers');
             $table->foreignId('country_code')->references('code')->on('countries');
             $table->timestamps();
